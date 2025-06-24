@@ -1,4 +1,14 @@
 describe('Orange HMC Tests', () => {
+  
+  const selectorsList = {
+    usernameField: "[name='username']",
+    passaswordField: "[name='password']",
+    loginButton: '.oxd-button',
+    sectionTitle: ".oxd-topbar-header-breadcrumb-module",
+    wrongCredentialsAlert: '.oxd-alert'
+  }
+  
+  
   it('Login - Success', () => {
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
     cy.get("[name='username']").type('Admin')
